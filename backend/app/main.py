@@ -14,7 +14,14 @@ app = FastAPI(title="Todo API")
 # Configuration CORS pour permettre les requêtes du frontend React
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:3002"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:3001", 
+        "http://localhost:3002",
+        "https://tvalcke.github.io",
+        "https://taskmaster-tvalcke.onrender.com",
+        "https://TaskMaster.tvalcke.be"  # Votre domaine personnalisé
+    ],
     allow_credentials=True,
     allow_methods=["*"],  # Autorise toutes les méthodes HTTP
     allow_headers=["*"],  # Autorise tous les en-têtes

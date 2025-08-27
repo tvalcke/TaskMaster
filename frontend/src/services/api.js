@@ -1,7 +1,10 @@
 // Service pour interagir avec l'API backend
 import axios from 'axios';
+import config from '../config.json';
 
-const API_URL = 'http://localhost:8000';
+// Déterminer l'environnement (production ou développement)
+const environment = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+const API_URL = config[environment].REACT_APP_API_URL;
 
 // Configuration d'axios avec l'URL de base
 const apiClient = axios.create({
