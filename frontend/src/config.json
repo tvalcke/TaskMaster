@@ -1,6 +1,6 @@
 {
   "production": {
-    "REACT_APP_API_URL": "https://taskmaster-api.onrender.com"
+    "REACT_APP_API_URL": "http://localhost:8000"
   },
   "development": {
     "REACT_APP_API_URL": "http://localhost:8000"
