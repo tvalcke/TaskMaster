@@ -15,11 +15,12 @@ app = FastAPI(title="Todo API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000", 
+        "http://localhost:3000",
         "http://localhost:3001", 
         "http://localhost:3002",
         "https://tvalcke.github.io",
-        "https://TaskMaster.tvalcke.be"
+        "https://taskmaster-tvalcke.onrender.com",
+        "https://TaskMaster.tvalcke.be"  # Votre domaine personnalisé
     ],
     allow_credentials=True,
     allow_methods=["*"],  # Autorise toutes les méthodes HTTP
